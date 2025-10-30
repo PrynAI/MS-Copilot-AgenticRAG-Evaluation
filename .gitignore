@@ -1,0 +1,6 @@
+data/synthetic/generated/
+evaluation/results/
+results/
+**/__pycache__/
+*.pbix
+.env
