@@ -1,8 +1,9 @@
 # MS-Copilot-AgenticRAG-Evaluation
 
 ## Overview
-This project evaluates and compares **Microsoft Copilot (Power BI Copilot)** with a custom-built **Agentic Retrieval-Augmented Generation (RAG)** solution.  
-The objective is to measure response accuracy, contextual understanding, and reasoning quality when querying enterprise data.
+- This project evaluates and compares **Microsoft Copilot (Power BI Copilot)** with a custom-built **Agentic Retrieval-Augmented Generation (RAG)** solution.  
+
+- The objective is to measure response accuracy, contextual understanding, and reasoning quality when querying enterprise data.
 
 ---
 
