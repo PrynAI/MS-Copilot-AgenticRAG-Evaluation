@@ -20,14 +20,17 @@
 - chunk (split unit used at retrieval).
 - chunkVector (Collection(Edm.Single), 1536‑dim).
 - Filter/facet fields: gradeName, hubName, membership_status_original, membership_type_original, special_pricing_reason, created_utc.
+
 ![alt text](image-3.png)
 
 #### Vector search:
 - HNSW profile; Azure OpenAI vectorizer bound to the profile so we can send vectorQueries: [{ "kind":"text" }] at query time.
+
 ![alt text](image-4.png)
 
 #### Semantic config:
 - mem-semantic with prioritized content fields [chunk, content] and relevant keyword fields (grade, hub, status). Queries use queryType: "semantic" and semanticConfiguration: "mem-semantic".
+
 ![alt text](image-5.png)
 
 ### How we did it
