@@ -14,8 +14,9 @@
 
 
    | Query  | Needs SQL? | Fields and dims you already have | Search index used?| Status|
-   
+
    | -------- | ---------- | -------- | -------------- | ------------------- |
+   
 | Active membership **this month**             | Yes                  | `dwh.fact_membership.active_date_fk`, `end_date_fk`, `membership_status_original`, `is_attrition`; join `report.dim_date` for [month start,end]                                                   | Optional for context/citations | OK. Use range filter on `active_date_fk<=month_end AND end_date_fk>=month_start` and exclude attrition.                            |
 | Active membership **last month**             | Yes                  | Same as above                                                                                                                                                                                     | Optional                       | OK.                                                                                                                                |
 | Active membership **this year**              | Yes                  | Same + year window from `report.dim_date`                                                                                                                                                         | Optional                       | OK.                                                                                                                                |
