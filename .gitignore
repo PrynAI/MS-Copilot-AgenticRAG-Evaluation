@@ -5,3 +5,4 @@ evaluation/results/
 results/
 **/__pycache__/
 .env
+.venv/
