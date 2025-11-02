@@ -1,4 +1,6 @@
-data/azureconfigurations.txt
+data/*.txt
+data/*.csv
+data/*.xlsx
 evaluation/results/
 results/
 **/__pycache__/
