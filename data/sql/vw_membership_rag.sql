@@ -12,6 +12,14 @@ SELECT
   fm.membership_type_original,
   fm.special_pricing_reason,
 
+
+    -- NEW: facet/filter fields that your index expects
+  g.grade_name   AS gradeName,
+  h.country_name AS hubName,
+
+    -- Optional: populate created_utc from warehouse (index has this field)
+  fm.created_date AS created_utc,
+
   -- human‑readable text for chunking/embedding
   CONCAT(
     'Member ', ISNULL(fm.membership_number,''), ' ',

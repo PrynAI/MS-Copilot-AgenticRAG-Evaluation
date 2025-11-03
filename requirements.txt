@@ -1,19 +1,8 @@
-# From your project root
-py -3.11 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-
-# Core libraries
-pip install -U langgraph langchain-core langchain-openai
-
-# Azure AI Search SDK
-pip install -U azure-search-documents
-
-# SQL client stack
-pip install -U pyodbc sqlalchemy
-
-# Config + utils
-pip install -U pydantic-settings python-dotenv tenacity
-
-
-Install ODBC Driver 18 for SQL Server
-
+python-dotenv>=1.0.1
+openai>=1.43.0
+langgraph==1.0.0
+langchain-core>=0.2.29
+requests>=2.32.3
+pyodbc>=5.1.0
+pydantic>=2.9.0
+sqlalchemy>=2.0.20

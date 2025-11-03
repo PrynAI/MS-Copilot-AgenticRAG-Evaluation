@@ -6,3 +6,4 @@ results/
 **/__pycache__/
 .env
 .venv/
+/rag_agent/__pycache__/

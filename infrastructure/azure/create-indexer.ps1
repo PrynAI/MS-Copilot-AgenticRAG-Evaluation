@@ -27,10 +27,10 @@ $indexer = @{
 
 $put = "https://$SearchServiceName.search.windows.net/indexers('$IndexerName')?api-version=$ApiVersion"
 Invoke-RestMethod -Method Put -Uri $put -Headers $h -Body $indexer
-Write-Host "✅ Indexer created: $IndexerName"
+Write-Host "Indexer created: $IndexerName"
 
 # Run now and report status URL
 $run = "https://$SearchServiceName.search.windows.net/indexers('$IndexerName')/search.run?api-version=$ApiVersion"
 Invoke-RestMethod -Method Post -Uri $run -Headers $h
-Write-Host "▶️  Indexer run requested. Check status at:"
+Write-Host "Indexer run requested. Check status at:"
 Write-Host "GET https://$SearchServiceName.search.windows.net/indexers('$IndexerName')/search.status?api-version=$ApiVersion"
