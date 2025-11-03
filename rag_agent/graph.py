@@ -1,5 +1,3 @@
-# LangGraph assembly
-
 from __future__ import annotations
 from typing import TypedDict, List, Dict, Any, Tuple
 from langgraph.graph import StateGraph, END

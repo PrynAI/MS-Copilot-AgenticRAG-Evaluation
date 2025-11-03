@@ -6,3 +6,4 @@ requests>=2.32.3
 pyodbc>=5.1.0
 pydantic>=2.9.0
 sqlalchemy>=2.0.20
+pydantic-settings>=2.5.2
