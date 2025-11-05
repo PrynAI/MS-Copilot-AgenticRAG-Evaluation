@@ -1,6 +1,7 @@
+-- Azure SQL
 CREATE OR ALTER VIEW report.vw_membership_rag AS
 SELECT
-  -- stable key: member + start + grade
+  -- stable key
   CAST(fm.member_fk AS varchar(20)) + '-' +
   CAST(fm.start_date_fk AS varchar(8)) + '-' +
   CAST(fm.grade_fk AS varchar(10))              AS doc_id,
@@ -12,15 +13,13 @@ SELECT
   fm.membership_type_original,
   fm.special_pricing_reason,
 
+  -- NEW: month keys for filtering (YYYY-MM)
+  CONVERT(varchar(7),
+    CONVERT(date, CONVERT(varchar(8), fm.active_date_fk), 112), 120) AS active_month,
+  CONVERT(varchar(7),
+    CONVERT(date, CONVERT(varchar(8), fm.start_date_fk), 112), 120)  AS start_month,
 
-    -- NEW: facet/filter fields that your index expects
-  g.grade_name   AS gradeName,
-  h.country_name AS hubName,
-
-    -- Optional: populate created_utc from warehouse (index has this field)
-  fm.created_date AS created_utc,
-
-  -- human‑readable text for chunking/embedding
+  -- human-readable text for chunking/embedding
   CONCAT(
     'Member ', ISNULL(fm.membership_number,''), ' ',
     ISNULL(fm.membership_name,''), '. ',

@@ -1,0 +1,12 @@
+{
+  "mode": "vector_only",
+  "k_candidates": 50,
+  "top_k": 10,
+  "search_index": "membership-rag-idx",
+  "search_api_version": "2025-09-01",
+  "endpoint": "https://prynaiagenticragsearch.search.windows.net",
+  "timestamp_utc": "2025-11-04T23:33:50Z",
+  "notes": "Modern RAG baseline evaluation with fixed k_candidates=50, top=10",
+  "macro_recall_at_10": 0.014285714285714287,
+  "macro_mrr_at_10": 0.07142857142857142
+}

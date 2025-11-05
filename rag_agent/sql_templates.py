@@ -5,6 +5,7 @@ import re, calendar
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 from typing import Dict, Any, List, Tuple, Optional
+from eval.eval_common import get_eval_today
 
 # Business mapping from repo:
 # - Active membership counts use active_date_fk month. (Copilot validation guidance) 
@@ -24,7 +25,7 @@ def month_bounds(year: int, month: int) -> TimeWindow:
 
 def parse_time_window(text: str, today: Optional[date] = None) -> Tuple[str, TimeWindow]:
     t = text.lower()
-    today = today or date.today()
+    today = get_eval_today()
 
     # explicit month-year like "november 2025", "oct 2025"
     m = re.search(r"(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec|january|february|march|april|june|july|august|september|october|november|december)\s+(\d{4})", t)

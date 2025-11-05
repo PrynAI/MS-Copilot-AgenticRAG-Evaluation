@@ -1,0 +1,42 @@
+[
+    {
+        "id": "Q1",
+        "query": "Active membership this month"
+    },
+    {
+        "id": "Q2",
+        "query": "How many active membership last month by region"
+    },
+    {
+        "id": "Q3",
+        "query": "How many active membership this year by grade"
+    },
+    {
+        "id": "Q4",
+        "query": "How many admission joins this month"
+    },
+    {
+        "id": "Q5",
+        "query": "How many admission joins November 2025"
+    },
+    {
+        "id": "Q6",
+        "query": "How many admission joins last month by grade"
+    },
+    {
+        "id": "Q7",
+        "query": "How many upgrades this month"
+    },
+    {
+        "id": "Q8",
+        "query": "How many upgrades last month by gender"
+    },
+    {
+        "id": "Q9",
+        "query": "How many members left this month by gender"
+    },
+    {
+        "id": "Q10",
+        "query": "How many upgrades October 2025 by region"
+    }
+]
